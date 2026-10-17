@@ -1,0 +1,141 @@
+.store-header {
+  background: #fff;
+
+  &__benefits {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7%;
+    min-height: 24px;
+    padding: 3px max(6%, calc((100% - 1200px) / 2));
+    border-bottom: 1px solid #f1f1f1;
+    color: #777;
+    font-size: 10px;
+
+    strong {
+      color: #3b45bd;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 180px minmax(200px, 1fr) 180px;
+    align-items: center;
+    gap: 24px;
+    max-width: 1200px;
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__logo img {
+    display: block;
+    width: 124px;
+    height: auto;
+  }
+
+  &__search {
+    display: flex;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid #ededed;
+    border-radius: 6px;
+    background: #f7f7f7;
+
+    input {
+      flex: 1;
+      min-width: 0;
+      padding: 0 14px;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font: inherit;
+      font-size: 12px;
+    }
+
+    button {
+      width: 44px;
+      border: 0;
+      background: transparent;
+      color: #888;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+
+    button,
+    a {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #777;
+      font-size: 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    min-height: 36px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-top: 1px solid #f2f2f2;
+
+    a {
+      display: grid;
+      align-items: center;
+      color: #555;
+      font-size: 9px;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus-visible {
+        color: #3942bf;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .store-header {
+    &__benefits {
+      justify-content: center;
+      gap: 12px;
+      padding-inline: 8px;
+      font-size: 8px;
+    }
+
+    &__main {
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding-block: 12px;
+    }
+
+    &__logo img {
+      width: 110px;
+    }
+
+    &__search {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    &__actions {
+      gap: 12px;
+    }
+
+    &__categories {
+      justify-content: flex-start;
+      gap: 24px;
+      overflow-x: auto;
+    }
+  }
+}
