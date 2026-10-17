@@ -66,15 +66,16 @@
     display: flex;
     justify-content: flex-end;
     gap: 18px;
+    
 
-    button,
+    button,img,
     a {
       padding: 0;
       border: 0;
       background: transparent;
       color: #777;
-      font-size: 20px;
-      text-decoration: none;
+      width: 20px;
+      height: 20px;
       cursor: pointer;
     }
   }

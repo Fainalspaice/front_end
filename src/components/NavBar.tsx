@@ -1,6 +1,8 @@
 import { useState, type FormEvent } from 'react';
 import logo from '../assets/logo.png';
 import './NavBar.scss';
+import box from '../assets/box.png';
+import heart from '../assets/heart.png';
 
 interface Props {
   onSearch: (term: string) => void;
@@ -38,8 +40,8 @@ export function NavBar({ onSearch }: Props) {
           <button type="submit" aria-label="Buscar">⌕</button>
         </form>
         <div className="store-header__actions" aria-label="Atalhos da loja">
-          <button type="button" aria-label="Comparar produtos">▣</button>
-          <button type="button" aria-label="Favoritos">♡</button>
+          <button type="button" aria-label="Comparar produtos"><img src={box} alt="Comparar produtos" /></button>
+          <button type="button" aria-label="Favoritos"><img src={heart} alt="Favoritos" /></button>
           <button type="button" aria-label="Minha conta">♙</button>
           <a href="#produtos" aria-label="Carrinho de compras">🛒</a>
         </div>
