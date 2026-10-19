@@ -28,7 +28,7 @@
     }
   }
 
-  &__icon {
+    &__icon {
     display: grid;
     width: 78px;
     height: 78px;
@@ -37,13 +37,17 @@
     background: #f7f7f7;
     box-shadow: 0 3px 9px #00000018;
     color: #222;
-    transition: 0.2s ease;
-
-    svg {
+    transition: 0.2s ease;  
+    
+    svg,img {
       width: 36px;
       height: 36px;
+      object-fit: contain;
+      
     }
+
   }
+
 }
 
 @media (max-width: 700px) {

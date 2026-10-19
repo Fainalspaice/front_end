@@ -3,6 +3,9 @@ import logo from '../assets/logo.png';
 import './NavBar.scss';
 import box from '../assets/box.png';
 import heart from '../assets/heart.png';
+import userCircle from '../assets/userCircle.png';
+import shoppingCart from '../assets/shoppingCart.png';
+
 
 interface Props {
   onSearch: (term: string) => void;
@@ -42,8 +45,8 @@ export function NavBar({ onSearch }: Props) {
         <div className="store-header__actions" aria-label="Atalhos da loja">
           <button type="button" aria-label="Comparar produtos"><img src={box} alt="Comparar produtos" /></button>
           <button type="button" aria-label="Favoritos"><img src={heart} alt="Favoritos" /></button>
-          <button type="button" aria-label="Minha conta">♙</button>
-          <a href="#produtos" aria-label="Carrinho de compras">🛒</a>
+          <button type="button" aria-label="Minha conta"><img src={userCircle} alt="Minha conta" /></button>
+          <a href="#produtos" aria-label="Carrinho de compras"><img src={shoppingCart} alt="Carrinho de compras" /></a>
         </div>
       </div>
       <nav className="store-header__categories" aria-label="Categorias principais">
